@@ -58,26 +58,108 @@
               </ol>
           </accordion-group>
         </accordion>
-
       </div>
+
       <div class="col-xs-8 col-xs-offset-4 col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3 main">
         <tabset>
           <tab heading="Projects Overview">
             <div class="row">
               <div class="col-xs-6">
-                <div class="panel-heading">
-                  <span class="glyphicon glyphicon-bullhorn"></span>
-                  <b>Issue Tracking</b>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <span class="glyphicon glyphicon-bullhorn"></span>
+                    <b>Issue Tracking</b>
+                  </div>
+                  <ul class="list-group">
+                    <li class="list-group-item"><span class="label label-danger">Defect</span> 1168 open /6316</li>
+                    <li class="list-group-item"><span class="label label-danger">Feature</span> 2729 open /5089</li>
+                    <li class="list-group-item"><span class="label label-danger">Defect</span> 409 open /1848</li>
+                  </ul>
                 </div>
-                <ul class="list-group">
-                  <li class="list-group-item"><span class="label label-danger">Defect</span>1168 open /6316</li>
-                  <li class="list-group-item"><span class="label label-danger">Feature</span>2729 open /5089</li>
-                  <li class="list-group-item"><span class="label label-danger">Defect</span>409 open /1848</li>
-                </ul>
+              </div>
+            <div class="col-xs-6">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <span class="glyphicon glyphicon-user"></span>
+                  <b>Top Developers</b>
+                </div>
+                <table class="table">
+                  <tr>
+                    <td class="text-center"><a href="#/user/1">Chris Odom</a></td>
+                    <td class="text-center"><a href="#/user/2">Jason Adams</a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center"><a href="#/user/3">Dustin Sinkey</a></td>
+                    <td class="text-center"><a href="#/user/4">Kenneth Taitt</a></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center"><a href="#/user/5">David Rabkin</a></td>
+                    <td class="text-center"><a href="#/user/6">Dr. Elaine Korzak</a></td>
+                  </tr>
+                </table>
               </div>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <h4>Activity</h4>
+                <table class="table">
+                  <tr>
+                    <td class="col-sm-1"><span class="glyphicon glyphicon-file"></span><span text="muted">21:24</span></td>
+                    <td class="col-sm-4"><span class="label label-danger">#1334</span> OAUTH is not functional</td>
+                    <td class="col-sm-6"><small class="text-muted">The backend service throws error even though credntials are valid.</small></td>
+                  </tr>
+                  <tr>
+                    <td class="col-sm-1"><span class="glyphicon glyphicon-file"></span><span text="muted">18:24</span></td>
+                    <td class="col-sm-4"><span class="label label-danger">#1078</span> Popup design issue in IE</td>
+                    <td class="col-sm-6"><small class="text-muted">It is not properly center alinged and the backdrop is pitch dark, god I hate IE</small></td>
+                  </tr>
+                  <tr>
+                    <td class="col-sm-1"><span class="glyphicon glyphicon-file"></span><span text="muted">13:24</span></td>
+                    <td class="col-sm-4"><span class="label label-success">#2690</span>Dictionary service implementation</td>
+                    <td class="col-sm-6"><small class="text-muted">We've intergrated Google Translate service to improve dictionary lookup</small></td>
+                  </tr> 
+                </table>  
+            </div>
+          </div>
           </tab>
-          <tab heading="Issues">Issues not Found.</tab>
+
+          <tab heading="Issues">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-right">#</th>
+                  <th class="text-center">Tracker</th>
+                  <th>Status</th>
+                  <th>Subject</th>
+                  <th class="text-right">Updated</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-sm-1 text-right"><a href="#/issue/16887">16877</a></td>
+                  <td class="col-sm-1 text-center"><span class="label label-danger">Defect</span></td>
+                  <td class="col-sm-1">New</td>
+                  <td class="col-sm-7"><a href="#/issue/1030">No hook for issues closed by commit</td>
+                  <td class="col-sm-2 text-right">2016-01-23 20:49</td>
+                </tr>
+                <tr>
+                  <td class="col-sm-1 text-right"><a href="#/issue/2348">2348</a></td>
+                  <td class="col-sm-1 text-center"><span class="label label-success">Feature</span></td>
+                  <td class="col-sm-1">New</td>
+                  <td class="col-sm-7"><a href="#/issue/16887">No hook for issues closed by commit</td>
+                  <td class="col-sm-2 text-right">2016-01-24 10:19</td>
+                </tr> 
+                <tr>
+                  <td class="col-sm-1 text-right"><a href="#/issue/2030">2030</a></td>
+                  <td class="col-sm-1 text-center"><span class="label label-danger">Defect</span></td>
+                  <td class="col-sm-1">Reopened</td>
+                  <td class="col-sm-7"><a href="#/issue/2030">No hook for issues closed by commit</td>
+                  <td class="col-sm-2 text-right">2016-01-25 11:23</td>
+                </tr> 
+              </tbody>
+            </table>  
+          </tab>
         </tabset>
       </div>
     </div>
