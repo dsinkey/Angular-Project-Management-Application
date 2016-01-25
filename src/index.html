@@ -125,6 +125,13 @@
           </div>
           </tab>
 
+          <tab ng-controller="ViewIssueCtrl" ng-show="showTab">
+            <tab-heading>
+              <i class="glyphicon glyphicon-warning-sign"></i>Issue #{{issueId}}
+            <tab-heading>
+            <div ng-view></div>
+          </tab>
+
           <tab heading="Issues">
             <table class="table">
               <thead>
@@ -264,15 +271,13 @@
                                 <button type="button" class="btn btn-default" ng-click="$event.stopPropagation(); dateTo.opened = true;"><i class="glyphicon glyphicon-calendar"></i></button>
                               </span>
                           </p>
-
                           </p>
                         </div>
                       </div>
               </div>
-
             </form>
-
           </tab>
+
         </tabset>
       </div>
     </div>
