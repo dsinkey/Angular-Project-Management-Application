@@ -207,13 +207,10 @@
               <div class="form-group">
                 <label class="col-lg-2 control-label">Priority <span class="text-danger">*</span></label>
                   <div class="col-lg-10">
-                    <select class="form-control">
-                      <option value="low">Low</option>
-                      <option value="normal">Normal</option>
-                      <option value="high">High</option>
-                      <option value="urget">Urget</option>
-                      <option value="immediate">Immediate</option>
-                    </select>
+                    <rating ng-model="priority" max="5" on-hover="prepriority=value"></rating>
+                    <span class="label" ng-class="{'label-default': prepriority == 1, 'label-sucess': prepriority == 2, 'label-warning': prepriority == 3, 'label-info': prepriority == 4,'label-danger': prepriority == 5}">
+                      {{['Low', 'Normal','High','Urgent', 'Immediate'][prepriority - 1]}}
+                    </span>
                   </div>
               </div>
 
