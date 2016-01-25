@@ -174,11 +174,11 @@
               <div class="form-group">
                 <label class="col-lg-2 control-label">Tracker <span class="text-danger">*</span></label>
                 <div class="col-lg-3">
-                  <select class="form-control">
-                    <option value="defect">Defect</option>
-                    <option value="feature">Feature</option>
-                    <option value="patch">Patch</option>
-                  </select>
+                  <div class="btn-group">
+                    <label class="btn btn-danger" ng-model="tracker" btn-radio="'defect'">Defect</label>
+                    <label class="btn btn-success" ng-model="tracker" btn-radio="'feature'">Feature</label>
+                    <label class="btn btn-warning" ng-model="tracker" btn-radio="'patch'">Patch</label>
+                  </div>
                 </div>
 
               <label class="col-lg-2 control-label">Project <span class="text-danger">*</span></label>
@@ -254,6 +254,14 @@
                               </span>
                           </p>
 
+                          <p class="input-group">
+                            <input type="text" class="form-control" datepicker-popup="dd-MMMM-yyyy" ng-model="dateTo" is-open="dateTo.opened" placeholder="To Date"/>
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="$event.stopPropagation(); dateTo.opened = true;"><i class="glyphicon glyphicon-calendar"></i></button>
+                              </span>
+                          </p>
+
+                          </p>
                         </div>
                       </div>
               </div>
