@@ -19,4 +19,19 @@ angular.module('myApp.controllers', []).controller('ViewIssueCtrl', function($sc
     {image: 'images/3.png'}
   ];
 
+}).controller('FindCtrl', function($scope, $location){
+  $scope.issues = [
+    {'id': 16877, 'name': '#16877'},
+    {'id': 1030, 'name': '#1030'},
+    {'id': 2039, 'name': '#2039'},
+    {'id': 1134, 'name': '#1134'},
+    {'id': 1078, 'name': '#1078'},
+    {'id': 2690, 'name': '#2690'}
+  ];
+
+  $scope.onSelect = function(item){
+    $location.path('/issue/' + item.id);
+    $scope.find = '';
+  };
+  
 });

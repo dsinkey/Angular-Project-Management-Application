@@ -7,14 +7,28 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body ng-app="myApp">
 
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Ship It - Project Management Application</a>
+        <a class="navbar-brand" href="#">Ship It - Universal Project Management Application</a>
       </div>
+      <form class="navbar-form navbar-right" ng-controller="FindCtrl">
+        <input type="text" class="form-control" placeholder="Find Issues" ng-model="find" typeahead="issue.name for issue in issues | filter:$viewValue" typeahead-on-select='onSelect($item)'>
+        <span class="btn-group" dropdown>
+          <button type="button" class="btn btn-primary dropdown-toggle">
+            <span class='glyphicon glyphicon-cog'></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#/">New Project</a></li>
+            <li><a href="#/document">Upload Documents</a></li>
+            <li class="divider"></li>
+            <li><a href="#/settings">My Account</a></li>
+            <li><a href="#/login">Sign Out</a></li>
+          </ul>
+        </span>
+      </form>
     </div>
   </div>
 
@@ -125,7 +139,7 @@
           </div>
           </tab>
 
-          <tab ng-controller="ViewIssueCtrl" ng-show="showTab" heading="Issue #{{issueId}}">
+          <tab ng-controller="ViewIssueCtrl" ng-show="showTab">
             <tab-heading>
               <i class="glyphicon glyphicon-warning-sign"></i>
               Issue #{{issueId}}
